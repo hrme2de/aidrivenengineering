@@ -1,0 +1,12 @@
+
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "AI Driven Engineering"
+theme = "PaperMod"
+enableGitInfo = true
+paginate = 5
+
+[params]
+  author = "Helen"
+  description = "My blog about data driven engineering."
+  showReadingTime = true
