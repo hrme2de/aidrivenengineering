@@ -11,6 +11,9 @@ paginate = 5
   description = "My blog about data driven engineering."
   showReadingTime = true
 
+paginatePath = "page"
+mainSections = ["posts", "research"]
+
   [[menu.main]]
     name = "Blog"
     url = "/post_1/"
