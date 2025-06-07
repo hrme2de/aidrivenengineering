@@ -11,7 +11,6 @@ paginate = 5
   description = "My blog about data driven engineering."
   showReadingTime = true
 
-[menu]
   [[menu.main]]
     name = "Blog"
     url = "/post_1/"
