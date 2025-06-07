@@ -7,5 +7,5 @@ type: posts
 
 Welcome to my blog on AI driven engineering!
 
-
+categories: ["AI", "Engineering"]
 tags: ["featured", "AI"]
