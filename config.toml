@@ -10,3 +10,7 @@ paginate = 5
   author = "Helen"
   description = "My blog about data driven engineering."
   showReadingTime = true
+  
+[taxonomies]
+  category = "categories"
+  tag = "tags"
