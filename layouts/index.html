@@ -1,38 +1,62 @@
 {{ define "main" }}
 
-<h1>\How is AI changing engineering?</h1>
-<p>Explore our latest insights and articles in <a href="/posts/" style="color: #007acc; text-decoration: underline; font-weight: bold;">posts</a>.</p>
+<h1 style="margin-bottom: 1.5rem; font-weight: 700; font-size: 2.5rem;">
+  Unlocking Engineering Potential through Artificial Intelligence
+</h1>
 
-<section>
-  <h2>Featured Posts</h2>
-  <ul>
-    {{ $featured := where .Site.RegularPages "Params.tags" "intersect" (slice "featured") }}
-    {{ if gt (len $featured) 0 }}
+<p style="margin-bottom: 2rem; font-size: 1.1rem;">
+  Explore our latest insights and articles in 
+  <a href="/posts/" style="color: #007acc; text-decoration: underline; font-weight: bold;">posts</a>.
+</p>
+
+<section style="margin-bottom: 3rem;">
+  <h3 style="font-weight: 600; font-size: 1.4rem; color: #555; margin-bottom: 1rem;">
+    Featured Posts
+  </h3>
+
+  {{ $featured := where .Site.RegularPages "Params.tags" "intersect" (slice "featured") }}
+  {{ if gt (len $featured) 0 }}
+    <div style="display: flex; flex-direction: column; gap: 1.2rem;">
       {{ range first 3 $featured }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "Jan 2, 2006" }}<br>
-          <small>{{ .Summary }}</small>
-        </li>
+        <div>
+          <a href="{{ .RelPermalink }}" style="font-weight: 600; font-size: 1.15rem; color: #007acc; text-decoration: none;">
+            {{ .Title }}
+          </a>
+          <span style="color: #888; font-size: 0.85rem; margin-left: 0.5rem;">
+            — {{ .Date.Format "Jan 2, 2006" }}
+          </span>
+          <p style="margin: 0.3rem 0 0; font-size: 0.95rem; color: #444;">
+            {{ .Summary }}
+          </p>
+        </div>
       {{ end }}
-    {{ else }}
-      <li>No featured posts yet.</li>
-    {{ end }}
-  </ul>
+    </div>
+  {{ else }}
+    <p>No featured posts yet.</p>
+  {{ end }}
 </section>
 
-<section>
-  <h2>Browse by Categories</h2>
-  <ul>
-    {{ $categories := .Site.Taxonomies.categories }}
-    {{ if gt (len $categories) 0 }}
+<section style="margin-bottom: 3rem;">
+  <h3 style="font-weight: 600; font-size: 1.4rem; color: #555; margin-bottom: 1rem;">
+    Browse by Categories
+  </h3>
+
+  {{ $categories := .Site.Taxonomies.categories }}
+  {{ if gt (len $categories) 0 }}
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
       {{ range $name, $pages := $categories }}
-        <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name }} ({{ len $pages }})</a></li>
+        <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}" 
+           style="background-color: #e0e7f3; padding: 0.4rem 0.8rem; border-radius: 15px; 
+                  font-size: 0.9rem; color: #007acc; text-decoration: none; font-weight: 600;">
+          {{ $name }} ({{ len $pages }})
+        </a>
       {{ end }}
-    {{ else }}
-      <li>No categories found.</li>
-    {{ end }}
-  </ul>
+    </div>
+  {{ else }}
+    <p>No categories found.</p>
+  {{ end }}
 </section>
 
 {{ end }}
+
 
