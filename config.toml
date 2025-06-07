@@ -10,18 +10,3 @@ paginate = 5
   author = "Helen"
   description = "My blog about data driven engineering."
   showReadingTime = true
-
-paginatePath = "page"
-mainSections = ["posts", "research"]
-
-[menu]
-
-  [[menu.main]]
-    name = "Blog"
-    url = "/post_1/"
-    weight = 1
-
-  [[menu.main]]
-    name = "Research"
-    url = "/post_2/"
-    weight = 2
