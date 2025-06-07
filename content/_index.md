@@ -1,2 +1,5 @@
+---
+title: "AI Driven Engineering"
+---
 
-Check out the latest posts here: [Blog Posts](/posts/)
+Explore our latest insights and articles on [Blog Posts](/posts/).
