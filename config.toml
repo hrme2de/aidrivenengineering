@@ -14,6 +14,8 @@ paginate = 5
 paginatePath = "page"
 mainSections = ["posts", "research"]
 
+[menu]
+
   [[menu.main]]
     name = "Blog"
     url = "/post_1/"
@@ -22,4 +24,4 @@ mainSections = ["posts", "research"]
   [[menu.main]]
     name = "Research"
     url = "/post_2/"
-    weight = 1
+    weight = 2
