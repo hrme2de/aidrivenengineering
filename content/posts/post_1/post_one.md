@@ -6,3 +6,6 @@ type: posts
 ---
 
 Welcome to my blog on AI driven engineering!
+
+
+tags: ["featured", "AI"]
