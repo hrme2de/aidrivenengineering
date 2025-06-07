@@ -1,4 +1,4 @@
 baseURL = 'https://aidrivenengineering.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'AI Driven Engineering'
 theme = "PaperMod"
