@@ -1,7 +1,7 @@
 ---
 title: "AI on Engineering Practices and Innovation"
 date: 2025-06-07
-types: posts
+type: posts
 tags: ["AI", "Engineering", "Introduction"]
 categories: ["General"]
 summary: "An introduction to the impact of AI on engineering practices and innovation."
