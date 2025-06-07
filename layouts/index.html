@@ -1,3 +1,33 @@
 {{ define "main" }}
-  {{ .Content }}
+
+<h1>Welcome to AI Driven Engineering</h1>
+<p>Exploring AI-powered innovations in engineering.</p>
+
+<section>
+  <h2>Featured Posts</h2>
+  <ul>
+    {{ $featured := where .Site.RegularPages "Params.tags" "intersect" (slice "featured") }}
+    {{ range first 3 $featured }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "Jan 2, 2006" }}<br>
+        <small>{{ .Summary }}</small>
+      </li>
+    {{ else }}
+      <li>No featured posts yet.</li>
+    {{ end }}
+  </ul>
+</section>
+
+<section>
+  <h2>Browse by Categories</h2>
+  <ul>
+    {{ $categories := .Site.Taxonomies.categories }}
+    {{ range $name, $pages := $categories }}
+      <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name }} ({{ len $pages }})</a></li>
+    {{ else }}
+      <li>No categories found.</li>
+    {{ end }}
+  </ul>
+</section>
+
 {{ end }}
